@@ -3,6 +3,7 @@ class CreateGoodThings < ActiveRecord::Migration
     create_table :good_things do |t|
       t.string :name, :limit => 20
       t.integer :count, :default => 0
+      t.integer :user_id
 
       t.timestamps
     end

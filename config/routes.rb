@@ -5,7 +5,7 @@ GoodThings::Application.routes.draw do
 
   get "sessions/destroy"
 
-  resources :good_things, :except => ["edit"] do
+  resources :good_things, :except => ["edit","show"] do
     post :done, :on => :member
   end
 
