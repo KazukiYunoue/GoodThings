@@ -1,26 +1,20 @@
 <h1>Listing good_things</h1>
-<%= "Welcome, #{current_user.name} ! | " if current_user %><%= link_to "Sign Out.", signout_path if current_user %>
-<%= link_to "Sign in with facebook", "/auth/facebook" unless current_user %>
-<table>
+<p id="notice"><%= notice %></p>
+<%= link_to 'New Good thing', new_good_thing_path %>
+<table id="good_things">
   <tr>
     <th>Name</th>
     <th>Count</th>
-    <th></th>
-    <th></th>
     <th></th>
   </tr>
 
 <% @good_things.each do |good_thing| %>
   <tr>
-    <td><%= good_thing.name %></td>
-    <td><%= good_thing.count %></td>
-    <td><%= link_to 'Show', good_thing %></td>
-    <td><%= link_to 'Edit', edit_good_thing_path(good_thing) %></td>
-    <td><%= link_to 'Destroy', good_thing, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td id="name"><%= link_to good_thing.name, done_good_thing_path(good_thing), :method => :post %></td>
+    <td id="count"><%= number_with_delimiter good_thing.count %></td>
+    <td id="destroy"><%= link_to 'Destroy', good_thing, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New Good thing', new_good_thing_path %>

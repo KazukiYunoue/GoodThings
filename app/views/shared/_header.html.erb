@@ -1,0 +1,8 @@
+<div id="header">
+  <div id="logo">
+    <%= link_to_unless_current(image_tag('logo.png', :size => '131x65', :alt => 'logo'), root_path) %>
+  </div>
+  <%= "Welcome, #{current_user.name} ! | " if current_user %>
+  <%= link_to "Sign Out.", signout_path if current_user %>
+  <%= link_to "Sign in with facebook", "/auth/facebook" unless current_user %>  
+</div>

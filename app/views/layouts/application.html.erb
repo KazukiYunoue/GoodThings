@@ -7,8 +7,15 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div id="main">
+    <%= render 'shared/header' %>
+    <div id="contents">
+      <div id="notice">
+        <%= flash[:plzsign] if flash[:plzsign] %>
+      </div>
+      <%= yield %>
+    </div>
+    <%= render 'shared/footer' %>
+  </div>
 </body>
 </html>

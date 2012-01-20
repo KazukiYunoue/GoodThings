@@ -14,8 +14,8 @@
 ActiveRecord::Schema.define(:version => 20120120061807) do
 
   create_table "good_things", :force => true do |t|
-    t.string   "name"
-    t.integer  "count"
+    t.string   "name",       :limit => 20
+    t.integer  "count",                    :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end

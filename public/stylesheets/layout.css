@@ -1,0 +1,54 @@
+body {
+  background-color: #5555be;
+}
+
+div#main {
+  width: 950px;
+  margin: 10px auto;
+  background-color: #fff;
+}
+
+div#header, div#footer {
+  color: #666;
+  margin: 5px;
+  padding: 5px;
+}
+
+div#footer {
+  text-align: center;
+}
+
+div#contents {
+  background-color: #fff;
+  color: #000;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #ccc;
+}
+
+table#good_things {
+  width: 850px;
+  
+}
+
+table#good_things th {
+  text-align: center;
+}
+
+table#good_things td#name {
+  height: 45px;
+  font-size: 32px;
+  text-align: left;
+  text-height: 3px;
+}
+
+table#good_things td#count {
+  font-size: 32px;
+  font-style: italic;
+  text-align: right;
+}
+
+table#good_things td#destroy {
+  font-size: 8px;
+  text-align: right;
+}

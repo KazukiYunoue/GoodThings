@@ -1,8 +1,8 @@
 class CreateGoodThings < ActiveRecord::Migration
   def self.up
     create_table :good_things do |t|
-      t.string :name
-      t.integer :count
+      t.string :name, :limit => 20
+      t.integer :count, :default => 0
 
       t.timestamps
     end
