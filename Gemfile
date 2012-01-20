@@ -6,6 +6,7 @@ gem 'rails', '3.0.11'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'haml'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -29,3 +30,6 @@ gem 'sqlite3'
 # group :development, :test do
 #   gem 'webrat'
 # end
+
+# facebook app 
+gem 'oa-oauth'
